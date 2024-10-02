@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Dipak Patil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #e8e8e8;
+            background-color: #000000;
+            overflow: hidden; /* Prevent scrollbars due to sparkles */
+        }
+
+        /* Sparkling effect */
+        .sparkle {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: sparkle 1.5s infinite alternate;
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: scale(0.5);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 1s;   
+        }
+        .resume-section {
+            margin-bottom: 15px;
+            background: #231414;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .resume-header {
+            background: #6789ae;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            position: relative;
+        }
+        .resume-content {
+            padding: 15px;
+            display: none; /* Hidden by default */
+            animation: slideDown 0.5s;
+        }
+        .resume-header:hover {
+            background: #0056b3;
+        }
+        .download-button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 20px auto;
+            text-align: center;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .download-button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="journey.html">Journey</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Resume of Dipak Patil</h1>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('summary')">
+            Professional Summary
+        </div>
+        <div class="resume-content" id="summary">
+            <p>Innovative AI/ML developer with a proven track record in developing cutting-edge AI solutions, specializing in risk assessment 
+            models, virtual agents, and automation tools for financial services, HR, and security domains. Expert in leveraging Generative AI, 
+            Large Language Models (LLMs), and advanced data processing techniques to drive significant improvements in accuracy, efficiency, 
+            and security across various projects.</p>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('experience')">
+            Experience
+        </div>
+        <div class="resume-content" id="experience">
+            <h3>AI/ML Lead Engineer</h3>
+            <p>HCL Tech, Noida - Full-time (Jun 2024 - Present)</p>
+            <h3>System Engineer</h3>
+            <p>Infosys Limited, Pune - Full-time (Dec 2020 - Jun 2024)</p>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('skills')">
+            Skills
+        </div>
+        <div class="resume-content" id="skills">
+            <ul>
+                <p>Languages: Python, SQL</p>
+                <p>Frameworks and Platforms: FastAPI, Langchain, FAISS, Pandas</p>
+                <p>Technologies: LLM, OCR, RAG</p>
+                <p>Tools: OpenAI Products, Chatbot Development</p>
+            </ul>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('education')">
+            Education
+        </div>
+        <div class="resume-content" id="education">
+            <h3>Bachelor of Engineering (BE)</h3>
+            <p>Savitribai Phule Pune University (07/2020 - 05/2023)</p>
+            <p>CGPA: 8.48</p>
+            <h3>Diploma in Electronics and Telecommunication</h3>
+            <p>Government Polytechnic Nashik (06/2017 - 06/2020)</p>
+            <p>Percentage: 86.20%</p>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('certifications')">
+            Certifications
+        </div>
+        <div class="resume-content" id="certifications">
+            <ul>
+                <p>Advanced certification in Full-stack Data Science and AI (IIT Guwahati)</p>
+                <p>Possibilities with Gen AI and LLMs by Microsoft (Infosys Limited)</p>
+            </ul>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-header" onclick="toggleContent('interests')">
+            Interests
+        </div>
+        <div class="resume-content" id="interests">
+            <ul>
+                <p>Staying updated with technological advancements in AI</p>
+                <p>Modern Farming</p>
+            </ul>
+        </div>
+    </div>
+
+    <a class="download-button" href="\Dipak Patil Resume AIML_GenAI.pdf" download>Download Resume</a>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            content.style.display = (content.style.display === "block") ? "none" : "block";
+        }
+
+        // Create sparkles
+        function createSparkles() {
+            for (let i = 0; i < 50; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                sparkle.style.width = Math.random() * 5 + 'px';
+                sparkle.style.height = sparkle.style.width; // Make it circular
+                sparkle.style.left = Math.random() * window.innerWidth + 'px';
+                sparkle.style.top = Math.random() * window.innerHeight + 'px';
+                sparkle.style.animationDuration = Math.random() * 1 + 0.5 + 's';
+                sparkle.style.opacity = Math.random();
+                document.body.appendChild(sparkle);
+
+                // Remove sparkle after animation
+                sparkle.addEventListener('animationend', () => {
+                    sparkle.remove();
+                });
+            }
+        }
+
+        // Create sparkles every second
+        setInterval(createSparkles, 1000);
+    </script>
+    <footer style="font-size: 0.8em; padding: 5px 0; text-align: center; background-color: #000000; color: #ffffff;"></footer>
+        <p>&copy; 2024 Dipak Patil | All Rights Reserved</p>
+    </footer>
+    <script src="js/animations.js"></script>
+</body>
+</html>
