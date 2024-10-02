@@ -1,87 +1,96 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Dipak Patil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #272b2b;
+            color: #e8e8e8;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;    
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav a {
+            color: #00ccff;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            background: #080303;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(177, 55, 55, 0.1);
+            margin: 20px 0;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        footer {
+            font-size: 0.8em;
+            padding: 5px 0;
+            text-align: center;
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
 
-header {
-    padding: 100px;
-    background-color: #282c34;
-    color: white;
-}
+    <header>
+        <h1 class="fade-in">Contact Me</h1>
+    </header>
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="journey.html">Journey</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
+    <section>
+        <h2>Get in Touch</h2>
+        <p>Email: <a href="mailto:patildipakveruli@gmail.com" style="color: #00ccff;">patildipakveruli@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919766804044" style="color: #00ccff;">+91 9766804044</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/dipak-patil-ba7528214/" style="color: #00ccff;">LinkedIn Profile</a></p>
+    </section>
 
-nav ul li a {
-    text-decoration: none;
-    color: #61dafb;
-    font-size: 1.2rem;
-}
+    <section>
+        <h2>Send Your Feedback</h2>
+        <p>Please click the link below to send me an email:</p>
+        <p>
+            <a href="mailto:patildipakveruli@gmail.com?subject=Feedback&body=Hi Dipak Patil,%0D%0A%0D%0A" style="color: #00ccff;">
+                Send Feedback
+            </a>
+        </p>
+    </section>
 
-section {
-    padding: 50px;
-}
+    <footer>
+        <p>&copy; 2024 Dipak Patil | All Rights Reserved</p>
+    </footer>
 
-h2 {
-    color: #61dafb;
-}
-
-/* Footer */
-footer {
-    background-color: #282c34;
-    color: white;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Button Styles */
-.btn {
-    background-color: #61dafb;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #21a1f1;
-}
-
-/* Profile Image */
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-/* Project Image */
-.project-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Animations */
-.animated-bg {
-    background: linear-gradient(45deg, #ff6b6b, #f4f4f9);
-    color: white;
-}
-
-.slide-in {
-    animation: slideIn 2s forwards;
-}
+    <script src="js/animations.js"></script>
+</body>
+</html>
