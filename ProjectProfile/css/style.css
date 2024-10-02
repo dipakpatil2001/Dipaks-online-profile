@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    padding: 100px;
+    background-color: #282c34;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #61dafb;
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 50px;
+}
+
+h2 {
+    color: #61dafb;
+}
+
+/* Footer */
+footer {
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #61dafb;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #21a1f1;
+}
+
+/* Profile Image */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Project Image */
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Animations */
+.animated-bg {
+    background: linear-gradient(45deg, #ff6b6b, #f4f4f9);
+    color: white;
+}
+
+.slide-in {
+    animation: slideIn 2s forwards;
+}
